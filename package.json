@@ -1,0 +1,26 @@
+{
+    "name": "seek",
+    "version": "1.0.0",
+    "description": " pure-JavaScript CSS selector engine using browser native API.",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/S-Core/seek.git"
+    },
+    "keywords": [
+        "seek", 
+        "javascript",
+        "css selector", 
+        "CSS",
+        "Selector"
+    ],
+    "author": "S-Core",
+    "license": "GNU LESSER GENERAL PUBLIC LICENSE Version 2.1",
+    "bugs": {
+        "url": "https://github.com/S-Core/seek/issues"
+    },
+    "homepage": "https://github.com/S-Core/seek"
+}
