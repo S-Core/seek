@@ -409,7 +409,7 @@
 		var results = [], newSelector, oldId, newId, newContext = context, attrValues = [], tokens, token, i = 0, cnt = 0,
 			changeSelector = context.nodeType === 1 && context.nodeName.toLowerCase() !== "object";
 
-		if ( !selector || selector === "" ) {
+		if ( !selector ) {
 			return [];
 		}
 
