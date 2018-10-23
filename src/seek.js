@@ -445,7 +445,6 @@
 			return results;
 		} catch ( err ) {
 			throw new Error( "Syntax error, unrecognized expression: \n " + err.message +"     " + selector + "    " + newSelector );
-			return [];
 		} finally {
 			if ( changeSelector &&  !oldId  ) {
 				context.removeAttribute("id");
