@@ -130,7 +130,7 @@
 		try {
 			for ( ; i < length ; i++ ) {
 				result = querySelector( contexts[ i ] , selector );
-				if ( result && result.length > 0 ) {
+				if ( result.length > 0 ) {
 					push.apply( results, slice.call( result, 0 ) );
 				}
 			}
