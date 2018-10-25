@@ -97,13 +97,15 @@ module("selector", { teardown: moduleTeardown });
 */
 
 test("element", function() {
-	expect( 37 );
+	expect( 38 );
 
 	equal( seek("").length, 0, "Empty selector returns an empty array" );
 	equal( seek(" ").length, 0, "Empty selector returns an empty array" );
 	equal( seek("\t").length, 0, "Empty selector returns an empty array" );
 	var form = document.getElementById("form");
 	ok( !seek.matchesSelector( form, "" ), "Empty string passed to matchesSelector does not match" );
+
+	deepEqual( seek("div", document.createTextNode( "" )), [], "Text element as context fails silently" );
 
 	ok( seek("*").length >= 30, "Select all" );
 	var all = seek("*"), good = true;
