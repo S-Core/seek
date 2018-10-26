@@ -326,7 +326,7 @@ test("class", function() {
 });
 
 test("name", function() {
-	expect( 15 );
+	expect( 16 );
 
 	t( "Name selector", "input[name=action]", ["text1"] );
 	t( "Name selector with single quotes", "input[name='action']", ["text1"] );
@@ -347,14 +347,15 @@ test("name", function() {
 
 	form.remove();
 
-	var a = jQuery("<div><a id=\"tName1ID\" name=\"tName1\">tName1 A</a><a id=\"tName2ID\" name=\"tName2\">tName2 A</a><div id=\"tName1\">tName1 Div</div></div>")
+	var a = jQuery("<div><a id=\"tName1ID\" name=\"tName 1\">tName1 A</a><a id=\"tName2ID\" name=\"tName 2\">tName2 A</a><div id=\"tName1\">tName1 Div</div></div>")
 		.appendTo("#qunit-fixture").children();
 
 	equal( a.length, 3, "Make sure the right number of elements were inserted." );
 	equal( a[1].id, "tName2ID", "Make sure the right number of elements were inserted." );
 
-	equal( seek("[name=tName1]")[0], a[0], "Find elements that have similar IDs" );
-	equal( seek("[name=tName2]")[0], a[1], "Find elements that have similar IDs" );
+	equal( seek("[name=\"tName 1\"]")[0], a[0], "Find elements that have similar IDs" );
+	equal( seek("[name=\"tName 2\"]")[0], a[1], "Find elements that have similar IDs" );
+	equal( seek("[name~=\"tName\"]").length, 2, "Find elements that have similar IDs" );
 	t( "Find elements that have similar IDs", "#tName2ID", ["tName2ID"] );
 
 	a.parent().remove();
