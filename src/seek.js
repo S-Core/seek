@@ -812,9 +812,9 @@
 		return this.indexOf(suffix, this.length - suffix.length) !== -1;
 	};
 
-	function setFilters() {}
-	Expr.filters = setFilters.prototype = Expr.pseudos;
-	Expr.setFilters = new setFilters();
+	function SetFilters() {}
+	Expr.filters = SetFilters.prototype = Expr.pseudos;
+	Expr.setFilters = new SetFilters();
 
 	window.seek = seek;
 } ( window ) );
