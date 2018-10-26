@@ -1,7 +1,7 @@
 # SEEK
 
 __Seek is a pure-JavaScript CSS selector engine using browser native API.__
-We used native API to make it lightweight. It provide a convenience to find elements for manipulation.
+We used native API to make it lightweight. It provides convenience in finding elements for manipulation.
 
 * querySelectorAll
 * getElementById
@@ -10,9 +10,9 @@ We used native API to make it lightweight. It provide a convenience to find elem
 
 # Browser Supports
 
-A browers must support the native function of 'querySelectorAll'.
+A browser must support the native function of 'querySelectorAll'.
 
-As such, the following browser supporte:
+As such, __Seek__ supports the following browsers:
 * Chrome 16+
 * Edge 12+
 * Firefox 3.6+
