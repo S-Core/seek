@@ -130,7 +130,7 @@
 		try {
 			for ( ; i < length ; i++ ) {
 				result = querySelector( contexts[ i ] , selector );
-				if ( result && result.length > 0 ) {
+				if ( result.length > 0 ) {
 					push.apply( results, slice.call( result, 0 ) );
 				}
 			}
@@ -489,7 +489,7 @@
 				var  i = 0, j = 0, compared = 0, elem, index,
 					matches = seek( selector, null, null, elems ),
 					elemsLength = elems.length,
-					matchesLength = matches.length
+					matchesLength = matches.length,
 					results = elems.slice( 0 );
 
 				while ( i < elemsLength && j < matchesLength ) {
