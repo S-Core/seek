@@ -94,7 +94,7 @@
 					}
 				}
 			} else if ( matche [ 2 ] ) { // TAG
-				push.apply( results, slice.call( context.getElementsByTagName(  matche [ 2 ] ), 0 ) );
+				push.apply( results, slice.call( context.getElementsByTagName( matche [ 2 ] ), 0 ) );
 			} else if ( matche [ 3 ] ) { // CLASS
 				push.apply( results, slice.call( context.getElementsByClassName( matche[ 3 ] ), 0 ) );
 			}
@@ -107,7 +107,7 @@
 	}
 
 	function select( selector, context, results, seed ) {
-		var  result, seedLength = seed ? seed.length : 0;
+		var result, seedLength = seed ? seed.length : 0;
 
 		result = ( seedLength > 0 ) ?
 			validateElements( selector, context, seed ) :
@@ -124,7 +124,7 @@
 
 	function searchElements( selector, context, results, seed ) {
 		var result, i = 0,
-			contexts = context && context instanceof Array  ? context : [ context ],
+			contexts = context && context instanceof Array ? context : [ context ],
 			length = contexts.length;
 
 		try {
@@ -155,7 +155,7 @@
 			groups, length, tokens, elems;
 
 		groups = tokenize( selector );
-		length = groups.length ;
+		length = groups.length;
 
 		for ( ; i < length ; i++ ) {
 			tokens = processTokens( groups[i] );
@@ -373,7 +373,7 @@
 
 		elems = ( context instanceof Array ) ? context : [ context ];
 
-		for ( ; i < tokens.length  ; i++ ) {
+		for ( ; i < tokens.length ; i++ ) {
 			type = tokens[ i ]. type;
 			results = ( type === "child" ) ?
 				findElements( elems, tokens[ i ] ) :
@@ -447,7 +447,7 @@
 			throw new Error( "Syntax error, unrecognized expression: \n " + err.message +"     " + selector + "    " + newSelector );
 			return [];
 		} finally {
-			if ( changeSelector &&  !oldId  ) {
+			if ( changeSelector && !oldId ) {
 				context.removeAttribute("id");
 			}
 		}
@@ -486,16 +486,16 @@
 
 		pseudos: {
 			"not": function ( elems, selector ) {
-				var  i = 0, j = 0, compared = 0, elem, index,
+				var i = 0, j = 0, compared = 0, elem, index,
 					matches = seek( selector, null, null, elems ),
 					elemsLength = elems.length,
 					matchesLength = matches.length,
 					results = elems.slice( 0 );
 
 				while ( i < elemsLength && j < matchesLength ) {
-					compared = sortOrder( elems[ i ],  matches[ j ] );
-					if  ( compared === 0 ) {
-						if ( ( index = results.indexOf( elems[ i ] )  ) !== -1 ) {
+					compared = sortOrder( elems[ i ], matches[ j ] );
+					if ( compared === 0 ) {
+						if ( ( index = results.indexOf( elems[ i ] ) ) !== -1 ) {
 							results.splice( index, 1 );
 						}
 						i = i < elemsLength ? i + 1 : i;
@@ -550,7 +550,7 @@
 			},
 
 			"text": function( elem ) {
-				return elem.nodeName.toLowerCase() === "input" &&  elem.type === "text";
+				return elem.nodeName.toLowerCase() === "input" && elem.type === "text";
 			},
 
 			"input": function ( elem ) {
@@ -583,7 +583,7 @@
 			}
 
 			token = [];
-			isNot  = ( pieces[ i + 2 ] === "!=" );
+			isNot = ( pieces[ i + 2 ] === "!=" );
 			noQuotation = ( pieces[ i + 3 ] === undefined );
 
 			token.push( "[",
@@ -803,7 +803,7 @@
 
 	// Back-compat
 	if ( !String.prototype.trim ) {
-		String.prototype.trim  = function() {
+		String.prototype.trim = function() {
 			return this.replace(/(^\s*)|(\s*$)/gi, "");
 		}
 	}
