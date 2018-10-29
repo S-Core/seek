@@ -486,7 +486,7 @@
 
 		pseudos: {
 			"not": function ( elems, selector ) {
-				var  i = 0, j = 0, compared = 0, elem, index,
+				var  i = 0, j = 0, compared = 0, index,
 					matches = seek( selector, null, null, elems ),
 					elemsLength = elems.length,
 					matchesLength = matches.length,
