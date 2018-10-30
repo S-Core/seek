@@ -406,7 +406,7 @@
 	}
 
 	function querySelector( context, selector ) {
-		var results = [], newSelector, oldId, newId, newContext = context, attrValues = [], tokens, token, i = 0, cnt = 0,
+		var results = [], newSelector, oldId, newId, newContext = context,
 			changeSelector = context.nodeType === 1 && context.nodeName.toLowerCase() !== "object";
 
 		if ( !selector ) {
