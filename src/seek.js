@@ -759,7 +759,7 @@
 	 * Utility function for retrieving the text value of an array of DOM nodes
 	 * @param {Array|Element} elem
 	 */
-	getText = seek.getText = function ( elem ) {
+	var getText = seek.getText = function ( elem ) {
 		var node, ret = "", i = 0, nodeType = elem.nodeType;
 
 		if ( nodeType ) {
