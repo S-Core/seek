@@ -795,7 +795,7 @@
 		return documentElement ? documentElement.nodeName !== "HTML" : false;
 	};
 
-	contains = seek.contains = function( a, b ) {
+	var contains = seek.contains = function( a, b ) {
 		var adown = a.nodeType === 9 ? a.documentElement : a,
 			bup = b && b.parentNode;
 		return a === bup || !!( bup && bup.nodeType === 1 && adown.contains && adown.contains(bup) );
