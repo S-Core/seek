@@ -805,7 +805,7 @@
 	if ( !String.prototype.trim ) {
 		String.prototype.trim  = function() {
 			return this.replace(/(^\s*)|(\s*$)/gi, "");
-		}
+		};
 	}
 
 	String.prototype.endsWith = function ( suffix ) {
