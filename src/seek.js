@@ -76,7 +76,7 @@
 			return [];
 		}
 
-		if ( !selector || typeof selector !== "string" || ( nodeType !== 1 && nodeType !== 9 ) ) {
+		if ( !selector || typeof selector !== "string" || ( nodeType !== 1 && nodeType !== 9 && nodeType !== 11 ) ) {
 			return results;
 		}
 

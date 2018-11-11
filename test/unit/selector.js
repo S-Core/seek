@@ -97,7 +97,7 @@ module("selector", { teardown: moduleTeardown });
 */
 
 test("element", function() {
-	expect( 38 );
+	expect( 39 );
 
 	equal( seek("").length, 0, "Empty selector returns an empty array" );
 	equal( seek(" ").length, 0, "Empty selector returns an empty array" );
@@ -154,6 +154,18 @@ test("element", function() {
 	deepEqual( seek("div em", siblingTest), [], "Element-rooted QSA does not select based on document context" );
 	deepEqual( seek("div em, div em, div em:not(div em)", siblingTest), [], "Element-rooted QSA does not select based on document context" );
 	deepEqual( seek("div em, em\\,", siblingTest), [], "Escaped commas do not get treated with an id in element-rooted QSA" );
+
+	var context = document.createDocumentFragment();
+	var wrapper= document.createElement("div");
+	wrapper.id = "siblingTest";
+	wrapper.innerHTML= "<em id=\"siblingfirst\">1</em><em id=\"siblingnext\">2</em><em id=\"siblingthird\"><em id=\"siblingchild\"><em id=\"siblinggrandchild\"><em id=\"siblinggreatgrandchild\"></em></em></em></em><span id=\"siblingspan\"></span>";
+	context.appendChild(wrapper);
+	context.appendChild( document.getElementById( "siblingTest" ) );
+	deepEqual(
+		seek( "em:nth-child(2)", context ),
+		[].slice.call(context.querySelectorAll( "em:nth-child(2)" )),
+		"DocumentFragment context"
+	);
 
 	var iframe = document.getElementById("iframe"),
 		iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
