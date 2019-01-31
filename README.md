@@ -12,7 +12,7 @@ We used native API to make it lightweight. It provide a convenience to find elem
 
 A browers must support the native function of 'querySelectorAll'.
 
-As such, the following browser supporte:
+As such, the following browsers are supported:
 * Chrome 16+
 * Edge 12+
 * Firefox 3.6+
