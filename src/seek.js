@@ -452,7 +452,7 @@
 		}
 	}
 
-	Expr = seek.selectors = {
+	var Expr = seek.selectors = {
 		match: matchExpr,
 		find: {
 			"ID": function( id, context, xml ) {
