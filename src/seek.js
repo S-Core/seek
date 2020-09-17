@@ -343,7 +343,7 @@
 			return x.toLowerCase()
 		});
 
-		newSelector = newSelector.replace( /_COMMA_/g, ",")
+		newSelector = newSelector.replace( /_COMMA_/g, ",");
 
 		for ( ; i < length ; i++ ) {
 			type = seed[ i ].nodeType;
