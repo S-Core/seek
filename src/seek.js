@@ -340,7 +340,7 @@
 		var type, results = [], length = seed.length, i = 0, newSelector;
 
 		newSelector = validateAttribute( selector ).replace( rpseudoUpperkeys, function ( x ) {
-			return x.toLowerCase()
+			return x.toLowerCase();
 		});
 
 		newSelector = newSelector.replace( /_COMMA_/g, ",")
