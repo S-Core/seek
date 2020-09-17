@@ -356,7 +356,7 @@
 	}
 
 	function validate( tokens, context, seed ) {
-		var elems, token, results = seed, i = 0;
+		var elems, results = seed, i = 0;
 
 		for ( ; i < tokens.length ; i++) {
 			elems = results;
